@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import SiteLink from "@/components/Common/SiteLink";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
@@ -51,7 +50,7 @@ const Header = () => {
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-20 max-w-full px-4">
-              <Link
+              <SiteLink
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-5 lg:py-2" //"py-8"
@@ -71,7 +70,7 @@ const Header = () => {
                   height={30}
                   className="dark:block hidden w-full rounded-full"
                 />
-              </Link>
+              </SiteLink>
             </div>
             <div className="flex w-full items-center justify-between px-4">
               <div className="flex-col text-white">
@@ -114,7 +113,7 @@ const Header = () => {
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
-                          <Link
+                          <SiteLink
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
@@ -123,7 +122,7 @@ const Header = () => {
                             }`}
                           >
                             {menuItem.title}
-                          </Link>
+                          </SiteLink>
                         ) : (
                           <>
                             <p
@@ -155,18 +154,18 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
+                <SiteLink
                   href="/"
                   className="ease-in-up mr-2 hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Home
-                </Link>
-                <Link
+                </SiteLink>
+                <SiteLink
                   href="/about"
                   className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   About
-                </Link>
+                </SiteLink>
                 {/*}
                 <div>
                   <ThemeToggler />

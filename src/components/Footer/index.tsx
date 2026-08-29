@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import SiteLink from "@/components/Common/SiteLink";
 import Link from "next/link";
 
 const Footer = () => {
@@ -13,7 +14,7 @@ const Footer = () => {
                 {" "}
                 <div className="flex items-center">
                   <div className="w-20 max-w-full pr-4">
-                    <Link
+                    <SiteLink
                       href="/"
                       className={`header-logo block w-full ${
                         "py-5 lg:py-2" //"py-8"
@@ -33,7 +34,7 @@ const Footer = () => {
                         height={30}
                         className="dark:block hidden w-full rounded-full"
                       />
-                    </Link>
+                    </SiteLink>
                   </div>
                   <div className="flex-col text-white">
                     <h1>C.P. McDonough</h1>
@@ -146,20 +147,20 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <Link
+                    <SiteLink
                       href="/"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       Home
-                    </Link>
+                    </SiteLink>
                   </li>
                   <li>
-                    <Link
+                    <SiteLink
                       href="/about"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       About
-                    </Link>
+                    </SiteLink>
                   </li>
                 </ul>
               </div>

@@ -1,6 +1,4 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
 import Location from "@/components/Location";
 
